@@ -39,4 +39,19 @@ public class StackAndQueueTest {
 		}
 		assertEquals(myStack.isEmpty(), true);
 	}
+	
+	@Test
+	public void queueTestUC3() {
+		System.out.println("\nUC-03:");
+		MyQueue<Integer> myQueue = new MyQueue<Integer>();
+		MyNode<Integer> firstNode = new MyNode<Integer>(56);
+		myQueue.enqueue(firstNode);
+		MyNode<Integer> secondNode = new MyNode<Integer>(30);
+		myQueue.enqueue(secondNode);
+		MyNode<Integer> thirdNode = new MyNode<Integer>(70);
+		myQueue.enqueue(thirdNode);
+		myQueue.printQueue();
+		assertEquals(myQueue.front(), firstNode);
+		assertEquals(myQueue.rear(), thirdNode);
+	}
 } 
