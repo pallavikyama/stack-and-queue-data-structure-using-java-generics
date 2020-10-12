@@ -17,6 +17,18 @@ public class MyStack<E> {
 		return myNewList.head;
 	}
 
+	//
+	public NewNodeInterface<E> pop() {
+		return myNewList.pop();
+	}
+
+	// CHECK IF STACK IS EMPTY
+	public boolean isEmpty() {
+		if (myNewList.size() == 0)
+			return true;
+		return false;
+	}
+
 	public void printStack() {
 		myNewList.printNodes();
 	}
