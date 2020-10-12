@@ -54,4 +54,26 @@ public class StackAndQueueTest {
 		assertEquals(myQueue.front(), firstNode);
 		assertEquals(myQueue.rear(), thirdNode);
 	}
+	
+	@Test
+	public void queueTestUC4() {
+		System.out.println("\nUC-04:");
+		MyQueue<Integer> myQueue = new MyQueue<Integer>();
+		MyNode<Integer> firstNode = new MyNode<Integer>(56);
+		myQueue.enqueue(firstNode);
+		MyNode<Integer> secondNode = new MyNode<Integer>(30);
+		myQueue.enqueue(secondNode);
+		MyNode<Integer> thirdNode = new MyNode<Integer>(70);
+		myQueue.enqueue(thirdNode);
+		assertEquals(myQueue.front(), firstNode);
+		assertEquals(myQueue.rear(), thirdNode);
+		while (!myQueue.isEmpty()) {
+			myQueue.printQueue();
+			System.out.println("Front node is " + myQueue.front().getData() + ".");
+			System.out.println("Rear node is " + myQueue.rear().getData() + ".");
+			NewNodeInterface<Integer> dequeueValue = myQueue.dequeue();
+			System.out.println("Dequeueing " + dequeueValue.getData() + ".");
+		}
+		assertEquals(myQueue.isEmpty(), true);
+	}
 } 

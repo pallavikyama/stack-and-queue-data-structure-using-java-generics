@@ -22,6 +22,18 @@ public class MyQueue<E> {
 		return myNewList2.tail;
 	}
 
+	// REMOVING NODE FROM FRONT IN QUEUE
+	public NewNodeInterface<E> dequeue() {
+		return myNewList2.pop();
+	}
+
+	// CHECK IF STACK IS EMPTY
+	public boolean isEmpty() {
+		if (myNewList2.size() == 0)
+			return true;
+		return false;
+	}
+
 	public void printQueue() {
 		myNewList2.printNodes();
 	}
